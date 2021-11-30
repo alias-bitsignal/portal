@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bismuth is a hybrid blockchain platform. Mainnet is Proof-of-Work and hypernode network is Proof-of-Stake">
+    <meta name="author" content="Bismuth Foundation">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Bismuth Platform - Python Blockchain</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/masonry/">
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+<!-- Custom styles for this template -->
+<link href="headers.css" rel="stylesheet">    
+  
+
+  </head>
+  <body>
+
+<svg xmlns="http://www.w3.org/2000/svg"  style="display: none;">
+  <symbol id="bootstrap" data-name="bootstrap" viewBox="0 0 563.89 845.83">
+	<defs><style>.cls-1{fill:#5fa1ee;}.cls-2{fill:#b364c2;}</style></defs>
+	<path class="cls-1" d="M753.69-730.2A281.34,281.34,0,0,1,731.2-619.68a284.61,284.61,0,0,1-13.8,27.9,283.23,283.23,0,0,1-78.15,88.36C631.8-497.91,624-492.8,616.07-488a280.56,280.56,0,0,1-144.33,39.76A280.41,280.41,0,0,1,332.46-485.1a147.4,147.4,0,0,1,65.19-88.18,172.46,172.46,0,0,0,74.09,16.64,172.45,172.45,0,0,0,77.34-18.22,173.7,173.7,0,0,0,25.31-15.44,173.93,173.93,0,0,0,63-88.24,171.37,171.37,0,0,0,6.25-27.86,174.75,174.75,0,0,0,1.68-23.8A173.58,173.58,0,0,0,471.74-903.79,173.57,173.57,0,0,0,298.17-730.2a175.48,175.48,0,0,0,2.17,27.4,310.93,310.93,0,0,0-85.69,88.48A280.75,280.75,0,0,1,189.8-730.2v-282H471.74a281.11,281.11,0,0,1,199.38,82.58A281.09,281.09,0,0,1,753.69-730.2Z" transform="translate(-189.8 1012.16)"/>
+	<path class="cls-2" d="M730-561.5a311.07,311.07,0,0,1-83.93,85.81c-.87.61-1.77,1.19-2.66,1.78a174.86,174.86,0,0,1,1.9,25.64A173.58,173.58,0,0,1,471.74-274.69,173.58,173.58,0,0,1,298.17-448.27,173.57,173.57,0,0,1,471.74-621.84a172.84,172.84,0,0,1,75.74,17.37c.44-.26.89-.49,1.33-.76A147.45,147.45,0,0,0,613.53-692a280.55,280.55,0,0,0-141.79-38.21h0C316-730.21,189.8-604,189.8-448.27v282H471.74c155.72,0,282-126.23,282-281.95h0A280.9,280.9,0,0,0,730-561.5Z" transform="translate(-189.8 1012.16)"/>
+  </symbol>
+</svg>
+
+
+
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="https://bismuth.live" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="36" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="https://bismuth.live/" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="https://hypernodes.bismuth.live/" class="nav-link px-2 text-white">About</a></li>
+          <li><a href="https://hypernodes.bismuth.live/?page_id=1507" class="nav-link px-2 text-white">Archives</a></li>
+          <li><a href="https://hypernodes.bismuth.live/?page_id=20" class="nav-link px-2 text-white">Blog</a></li>
+
+          
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="https://hypernodes.bismuth.live/?page_id=94" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Mainnet
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=152">Account Explorer</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=148">Block Explorer</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=94">Diff, Blocktime, HR</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=161">Latest Transactions</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=185">Number of Accounts</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=167">Richlist</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=110">Statistics</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=141">Top Miners</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=776">Profitability Calculator</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=205">Mainnet Snapshots</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="https://hypernodes.bismuth.live/?page_id=163" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hypernode
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          	<li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=163">Hypernodes Overview</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=48">Hypernode Registration</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=19">Account Explorer</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=18">Block Explorer</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=70">Latest Blocks</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=21">Network Status</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=183">Top Miners</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=2">Posnet Transaction</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="https://hypernodes.bismuth.live/?page_id=150" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Testnet
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=150">Account Explorer</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=146">Block Explorer</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=91">Diff, Blocktime, HR</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=159">Latest Transactions</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=187">Number of Accounts</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=169">Richlist</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=106">Statistics</a></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=139">Top Miners</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://hypernodes.bismuth.live/?page_id=207">Testnet Snapshots</a></li>
+          </ul>
+        </li>
+
+          <li><a href="https://hypernodes.bismuth.live/?page_id=2565" class="nav-link px-2 text-white">Legal</a></li>
+        </ul>
+
+        <div class="text-end">
+          <a class="btn btn-outline-light me-2" href="https://github.com/bismuthfoundation" role="button">Github</a>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+<main class="container py-5">
+  <h1>Bismuth - Explore the first Python Blockchain</h1>
+  <p class="lead">The <a href="https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Bismuth-Model.md">Bismuth Platform</a> is an open-source, unfunded project (no initial coin offering, no pre-mining), launched in May 2017 and maintained by the Bismuth Foundation.</p>
+
+  <p><a href="https://github.com/bismuthfoundation/Bismuth">Mainet</a> Proof-of-Work SHA224 (custom implementation) GPU mining, <a href="https://github.com/bismuthfoundation/hypernode">Hypernode</a> Proof-of-Stake (custom implementation).</p>
+
+
+  <p>Virtually anything can be created on Bismuth's modular platform, ranging from simple token issuance, to complex decentralized application (dApp) services.</p>
+
+  <hr class="my-5">
+
+  <div class="row" data-masonry='{"percentPosition": true }'>
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
+
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Bismuth global nodes</title><rect width="100%" height="100%" fill="#a9d4df"/><image href="assets/img/nm.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Global Node Map</h5>
+          <p class="card-text">Take a look at the Global Bismuth <a href="http://167.86.120.22:5493/">Node Map</a> to have an overview where in the world Bismuth nodes are running.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0">
+          <blockquote class="blockquote">
+            <p>BIS has an asynchronous contract model which indicates better scaling options</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-muted">
+            <cite title="Source Title">bismuthplatform.com</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
+
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Virtual Collectibles</title><rect width="100%" height="100%" fill="#f2f2f2"/><image href="assets/img/dragginator.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">App - Dragginator Collectibles</h5>
+          <p class="card-text"><a href="https://dragginator.com/">Dragginator</a> is a virtual NFT game based on the Bismuth blockchain. Buy and sell dragon eggs.</p>
+          <p class="card-text"><small class="text-muted">dragginator.com</small></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Bismuth Explorer</title><rect width="100%" height="100%" fill="#140d1b"/><image href="assets/img/bis_explorer.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Bismuth Explorer</h5>
+          <p class="card-text">Use the <a href="https://bismuth.im/">Bismuth Explorer</a> to search for transactions, address balances and blocks.</p>
+          <p class="card-text"><small class="text-muted">Github <a href="https://github.com/maccaspacca/BismuthExplorer">BIS Explorer</a> Source Code</small></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
+
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Proof of Concept - ZircoDice</title><rect width="100%" height="100%" fill="#030303"/><image href="assets/img/zd.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">PoC App - ZircoDice</h5>
+          <p class="card-text"><a href="http://167.86.120.22:1212/">ZircoDice</a> is a blockchain based dice game.</p>
+          <p class="card-text"><small class="text-muted">Github <a href="https://github.com/hclivess/BismuthProjects/tree/master/zircodice">ZircoDice</a> Source Code</small></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Bismuth Autogame</title><rect width="100%" height="100%" fill="#ffffff"/><image href="assets/img/autogame.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Bismuth Autogame</h5>
+          <p class="card-text"><a href="http://autogame.bismuth.live:6060/">Autogame</a> is a deterministic semi-autonomous computer game with RPG elements.</p>
+          <p class="card-text"><small class="text-muted">Github <a href="https://github.com/hclivess/BismuthProjects/blob/master/autogame/about.md">Autogame</a> Source Code</small></p>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0">
+          <blockquote class="blockquote">
+            <p>Bismuth Proof-of-Work mainnet launched in 2017, but has been in development since 2014.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-muted">
+             <cite title="Source Title">bismuthplatform.com</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Interactive Hypernode Map</title><rect width="100%" height="100%" fill="#191a1a"/><image href="assets/img/hn_map.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Hypernode Map</h5>
+          <p class="card-text">Interactive <a href="https://bismuth-map.herokuapp.com/">Hypernode Map</a> created by Dingo. The map shows the combined weight at each location for the size of every bubble.</p>
+        </div>
+      </div>
+    </div>
+
+   <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Twitter Bismuth Faucet</title><rect width="100%" height="100%" fill="#191a1a"/><image href="assets/img/free_bis.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Twitter Bismuth Faucet</h5>
+          <p class="card-text">The <a href="https://bismuth-map.herokuapp.com/">Twitter Bismuth Faucet</a> sends you free BIS for tweeting about Bismuth. Include the hashtags #Bismuth and $BIS.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0">
+          <blockquote class="blockquote">
+            <p>Bismuth is the only project in the world that has implemented the alternative approach to smart contracts as suggested by Nick Szabo.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-muted">
+             <cite title="Source Title">bismuthplatform.com</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>API Explorer</title><rect width="100%" height="100%" fill="#f5f5f5"/><image href="assets/img/api.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Stator API Explorer</h5>
+          <p class="card-text"><a href="http://167.86.120.22:8888/">Stator</a> - The POC Bismuth explorer and statistics reporter</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Hypernode Monitor</title><rect width="100%" height="100%" fill="#f5f5f5"/><image href="assets/img/hn_monitor.png" height="200" width="100%"/></svg>
+
+        <div class="card-body">
+          <h5 class="card-title">Hypernode Monitoring</h5>
+          <p class="card-text">Monitor the status of your <a href="http://167.86.120.22:8888/">Hypernode</a></p>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0">
+          <blockquote class="blockquote">
+            <p>BIS supports multiple crypto schemes for signatures, making it effectively resistant to a quantum attack towards any single system.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-muted">
+             <cite title="Source Title">bismuthplatform.com</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+   <!--  <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card bg-primary text-white text-center p-3">
+        <figure class="mb-0">
+          <blockquote class="blockquote">
+            <p>PoW Block Height: 2,496,212</p>
+            <p>Hashrate: 401 GH/s</p>
+            <p>Difficulty: 102.048</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-white">
+            genesis block <cite title="Source Title">May 2017</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card bg-primary text-white text-center p-3">
+        <figure class="mb-0">
+          <blockquote class="blockquote">
+            <p>PoS Block Height: 419,518</p>
+            <p>Staked Collateral: 6,520,000</p>
+            <p>Estimated ROI: 19.2 %</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-white">
+            genesis block <cite title="Source Title">August 2018</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div> -->
+
+
+
+</main>
+
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+  </body>
+</html>
